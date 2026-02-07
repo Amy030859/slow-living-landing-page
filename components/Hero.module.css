@@ -1,0 +1,113 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3xl) 0;
+    padding-top: calc(var(--spacing-3xl) + 80px);
+    /* Account for fixed nav */
+    background-color: var(--bg-primary);
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualPlaceholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--bg-accent) 0%, rgba(231, 176, 142, 0.5) 100%);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.visualPlaceholder p:first-child {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.visualPlaceholder p:nth-child(2) {
+    font-size: 4rem;
+}
+
+.visualPlaceholder p:last-child {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--spacing-2xl) + 60px);
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .cta {
+        flex-direction: column;
+    }
+
+    .cta a {
+        text-align: center;
+    }
+
+    .visualPlaceholder p:nth-child(2) {
+        font-size: 3rem;
+    }
+}
